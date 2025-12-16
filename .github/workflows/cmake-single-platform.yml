@@ -34,7 +34,7 @@ jobs:
       with:
         tag_name: xxx
         make_latest: false
-        files: /home/runner/work/builder/builder/archive/t31_lite_lincingtec1/*
+        files: target/*.t*
  # release:
  #   steps:
  #   - run: |
