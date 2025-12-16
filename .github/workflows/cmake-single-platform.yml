@@ -12,6 +12,9 @@ env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
 
+permissions:
+  contents: write
+
 jobs:
   build:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
@@ -29,6 +32,14 @@ jobs:
     - name: Upload
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: ${{env.TAG_NAME}}
+        tag_name: xxx
         make_latest: false
-        files: target/*.bin
+        files: /home/runner/work/builder/builder/archive/t31_lite_lincingtec1/*
+ # release:
+ #   steps:
+ #   - run: |
+ #       gh release create v1.2.3 release.tar.xz
+ #     env:
+ #       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+ #     shell: bash
+ #     name: Creates a release in GitHub and uploads attachments
