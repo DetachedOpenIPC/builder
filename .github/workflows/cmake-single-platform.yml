@@ -29,9 +29,9 @@ jobs:
       # Build your program with the given configuration
       run: ./builder.sh t31_lite_lincingtec1
 
-    - name: Ls
-      # Build your program with the given configuration
-      run: ls ${{github.workspace}}/openipc/output/images/
+#    - name: Ls
+#      # Build your program with the given configuration
+#      run: ls ${{github.workspace}}/openipc/output/images/
 
     - name: Upload
       uses: softprops/action-gh-release@v2
